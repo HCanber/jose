@@ -219,6 +219,16 @@ export async function importPKCS8(
  * }, 'PS256')
  * ```
  */
+ export async function importJWK(
+  jwk: JWK,
+  alg: string | undefined,
+  octAsKeyObject: false,
+ ): Promise<Uint8Array>
+ export async function importJWK(
+  jwk: JWK,
+  alg?: string,
+  octAsKeyObject?: true,
+): Promise<KeyLike>
 export async function importJWK(
   jwk: JWK,
   alg?: string,
